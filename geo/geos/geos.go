@@ -15,15 +15,15 @@
 package geos
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"runtime"
 	"sync"
 	"unsafe"
 
+	"github.com/engelsjk/planeta/docs"
+	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo/geopb"
-	"github.com/pkg/errors"
 )
 
 // #cgo CXXFLAGS: -std=c++14
@@ -93,7 +93,7 @@ func ensureInit(
 		)
 	})
 	if geosOnce.err != nil && errDisplay == EnsureInitErrorDisplayPublic {
-		return nil, errors.Errorf("geos: this operation is not available")
+		return nil, errors.Newf("geos: this operation is not available")
 	}
 	return geosOnce.geos, geosOnce.err
 }
@@ -184,40 +184,34 @@ func initGEOS(dirs []string) (*C.CR_GEOS, string, error) {
 		if newErr == nil {
 			return ret, dir, nil
 		}
-		// **only available in github.com/cockroachdb/errors**
-		// err = errors.CombineErrors(
-		// 	err,
-		// 	errors.Errorf(
-		// 		"geos: cannot load GEOS from dir %q: %s",
-		// 		dir,
-		// 		newErr,
-		// 	),
-		// )
-		err = errors.Wrap(err, fmt.Sprintf("geos: cannot load GEOS from dir %q: %s", dir, newErr))
-
+		err = errors.CombineErrors(
+			err,
+			errors.Newf(
+				"geos: cannot load GEOS from dir %q: %s",
+				dir,
+				newErr,
+			),
+		)
 	}
 	if err != nil {
 		return nil, "", wrapGEOSInitError(errors.Wrap(err, "geos: error during GEOS init"))
 	}
-	return nil, "", wrapGEOSInitError(errors.Errorf("geos: no locations to init GEOS"))
+	return nil, "", wrapGEOSInitError(errors.Newf("geos: no locations to init GEOS"))
 }
 
 func wrapGEOSInitError(err error) error {
-	// page := "linux"
-	// switch runtime.GOOS {
-	// case "darwin":
-	// 	page = "mac"
-	// case "windows":
-	// 	page = "windows"
-	// }
-
-	return errors.Wrap(err, "Ensure you have the spatial libraries installed as per the instructions")
-
-	// return errors.WithHintf(
-	// 	err,
-	// 	"Ensure you have the spatial libraries installed as per the instructions in %s",
-	// 	docs.URL("install-cockroachdb-"+page),
-	// )
+	page := "linux"
+	switch runtime.GOOS {
+	case "darwin":
+		page = "mac"
+	case "windows":
+		page = "windows"
+	}
+	return errors.WithHintf(
+		err,
+		"Ensure you have the spatial libraries installed as per the instructions in %s",
+		docs.URL("install-cockroachdb-"+page),
+	)
 }
 
 // goToCSlice returns a CR_GEOS_Slice from a given Go byte slice.
@@ -917,7 +911,7 @@ func Relate(a geopb.EWKB, b geopb.EWKB) (string, error) {
 		return "", err
 	}
 	if ret.data == nil {
-		return "", errors.Errorf("expected DE-9IM string but found nothing")
+		return "", errors.Newf("expected DE-9IM string but found nothing")
 	}
 	return string(cStringToSafeGoBytes(ret)), nil
 }
@@ -933,7 +927,7 @@ func RelateBoundaryNodeRule(a geopb.EWKB, b geopb.EWKB, bnr int) (string, error)
 		return "", err
 	}
 	if ret.data == nil {
-		return "", errors.Errorf("expected DE-9IM string but found nothing")
+		return "", errors.Newf("expected DE-9IM string but found nothing")
 	}
 	return string(cStringToSafeGoBytes(ret)), nil
 }
