@@ -48,7 +48,7 @@ func main() {
 	s2 := `{
 		"type": "Feature",
 		"properties": {
-			"name": "polypoly"
+			"name": "example"
 		},
 		"geometry": {
 		  "type": "Polygon",

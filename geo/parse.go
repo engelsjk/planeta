@@ -11,14 +11,15 @@
 package geo
 
 import (
+	"encoding/json"
 	"fmt"
 	"strconv"
 	"strings"
 
+	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo/geopb"
 	"github.com/engelsjk/planeta/geo/geos"
 	"github.com/engelsjk/planeta/util"
-	"github.com/cockroachdb/errors"
 	"github.com/pierrre/geohash"
 	"github.com/twpayne/go-geom"
 	"github.com/twpayne/go-geom/encoding/ewkb"
@@ -111,10 +112,20 @@ func parseWKB(
 func parseGeoJSON(
 	soType geopb.SpatialObjectType, b []byte, defaultSRID geopb.SRID,
 ) (geopb.SpatialObject, error) {
+
 	var t geom.T
-	if err := geojson.Unmarshal(b, &t); err != nil {
-		return geopb.SpatialObject{}, err
+	err := geojson.Unmarshal(b, &t)
+
+	// if error unmarshalling geojson geometry, try to unmarshal as a feature
+	if err != nil {
+		var f geojson.Feature
+		err := json.Unmarshal(b, &f)
+		if err != nil {
+			return geopb.SpatialObject{}, err
+		}
+		t = f.Geometry
 	}
+
 	if defaultSRID != 0 && t.SRID() == 0 {
 		AdjustGeomTSRID(t, defaultSRID)
 	}
