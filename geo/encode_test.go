@@ -13,7 +13,7 @@ package geo
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/geo/geopb"
+	"github.com/engelsjk/planeta/geo/geopb"
 	"github.com/stretchr/testify/require"
 )
 

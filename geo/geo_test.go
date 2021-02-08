@@ -17,8 +17,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/geo/geopb"
 	"github.com/cockroachdb/errors"
+	"github.com/engelsjk/planeta/geo/geopb"
 	"github.com/golang/geo/s2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
