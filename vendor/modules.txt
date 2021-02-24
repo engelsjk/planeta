@@ -1,0 +1,209 @@
+# github.com/Azure/azure-storage-blob-go v0.13.0
+## explicit
+# github.com/VividCortex/ewma v1.1.1
+## explicit
+# github.com/andy-kimball/arenaskl v0.0.0-20200617143215-f701008588b9
+## explicit
+# github.com/apache/arrow/go/arrow v0.0.0-20210208131157-1c219e3de5ce
+## explicit
+# github.com/axiomhq/hyperloglog v0.0.0-20191112132149-a4c4c47bc57f
+## explicit
+# github.com/benesch/cgosymbolizer v0.0.0-20190515212042-bec6fe6e597b
+## explicit
+# github.com/biogo/store v0.0.0-20201120204734-aad293a2328f
+## explicit
+# github.com/cenk/backoff v2.2.1+incompatible
+## explicit
+# github.com/certifi/gocertifi v0.0.0-20200922220541-2c3bb06c6054
+## explicit
+github.com/certifi/gocertifi
+# github.com/cockroachdb/apd v1.1.0
+## explicit
+# github.com/cockroachdb/circuitbreaker v2.2.1+incompatible
+## explicit
+# github.com/cockroachdb/cmux v0.0.0-20170110192607-30d10be49292
+## explicit
+# github.com/cockroachdb/cockroach v20.1.10+incompatible
+## explicit
+github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgcode
+github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror
+github.com/cockroachdb/cockroach/pkg/util/humanizeutil
+github.com/cockroachdb/cockroach/pkg/util/leaktest
+github.com/cockroachdb/cockroach/pkg/util/stacktrace
+github.com/cockroachdb/cockroach/pkg/util/syncutil
+github.com/cockroachdb/cockroach/pkg/util/timeutil
+# github.com/cockroachdb/cockroach-go v2.0.1+incompatible
+## explicit
+# github.com/cockroachdb/errors v1.8.2
+## explicit
+github.com/cockroachdb/errors
+github.com/cockroachdb/errors/assert
+github.com/cockroachdb/errors/barriers
+github.com/cockroachdb/errors/contexttags
+github.com/cockroachdb/errors/domains
+github.com/cockroachdb/errors/errbase
+github.com/cockroachdb/errors/errorspb
+github.com/cockroachdb/errors/errutil
+github.com/cockroachdb/errors/hintdetail
+github.com/cockroachdb/errors/issuelink
+github.com/cockroachdb/errors/markers
+github.com/cockroachdb/errors/report
+github.com/cockroachdb/errors/safedetails
+github.com/cockroachdb/errors/secondary
+github.com/cockroachdb/errors/stdstrings
+github.com/cockroachdb/errors/telemetrykeys
+github.com/cockroachdb/errors/withstack
+# github.com/cockroachdb/logtags v0.0.0-20190617123548-eb05cc24525f
+github.com/cockroachdb/logtags
+# github.com/cockroachdb/pebble v0.0.0-20210205133808-a516e691fb72
+## explicit
+# github.com/cockroachdb/redact v1.0.8
+github.com/cockroachdb/redact
+github.com/cockroachdb/redact/internal
+github.com/cockroachdb/redact/internal/fmtsort
+# github.com/cockroachdb/sentry-go v0.6.1-cockroachdb.2
+github.com/cockroachdb/sentry-go
+# github.com/cockroachdb/ttycolor v0.0.0-20180709150743-a1d5aaeb377d
+## explicit
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/dustin/go-humanize v1.0.0
+## explicit
+github.com/dustin/go-humanize
+# github.com/elastic/gosigar v0.13.0
+## explicit
+# github.com/elazarl/go-bindata-assetfs v1.0.1
+## explicit
+# github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a
+## explicit
+# github.com/getsentry/raven-go v0.2.0
+## explicit
+github.com/getsentry/raven-go
+# github.com/gofrs/uuid v4.0.0+incompatible
+## explicit
+# github.com/gogo/protobuf v1.3.1
+## explicit
+github.com/gogo/protobuf/proto
+github.com/gogo/protobuf/sortkeys
+github.com/gogo/protobuf/types
+# github.com/golang/geo v0.0.0-20210108004804-a63082ebfb66
+## explicit
+github.com/golang/geo/r1
+github.com/golang/geo/r2
+github.com/golang/geo/r3
+github.com/golang/geo/s1
+github.com/golang/geo/s2
+# github.com/google/flatbuffers v1.12.0
+## explicit
+# github.com/google/go-cmp v0.5.1
+## explicit
+# github.com/google/pprof v0.0.0-20210208152844-1612e9be7af6
+## explicit
+# github.com/googleapis/gax-go v1.0.3
+## explicit
+# github.com/grpc-ecosystem/grpc-gateway v1.16.0
+## explicit
+# github.com/ianlancetaylor/cgosymbolizer v0.0.0-20210118230828-4a0e67cfda35
+## explicit
+# github.com/jackc/fake v0.0.0-20150926172116-812a484cc733
+## explicit
+# github.com/jackc/pgx v3.6.2+incompatible
+## explicit
+# github.com/jaegertracing/jaeger v1.21.0
+## explicit
+# github.com/knz/go-libedit v1.10.1
+## explicit
+# github.com/knz/strtime v0.0.0-20200924090105-187c67f2bf5e
+## explicit
+# github.com/kr/pretty v0.2.0
+## explicit
+github.com/kr/pretty
+# github.com/kr/text v0.2.0
+## explicit
+github.com/kr/text
+# github.com/leanovate/gopter v0.2.9
+## explicit
+# github.com/lib/pq v1.8.0
+github.com/lib/pq
+github.com/lib/pq/oid
+github.com/lib/pq/scram
+# github.com/lightstep/lightstep-tracer-go v0.24.0
+## explicit
+# github.com/linkedin/goavro v2.1.0+incompatible
+## explicit
+# github.com/lufia/iostat v1.1.0
+## explicit
+# github.com/maruel/panicparse v1.6.1
+## explicit
+# github.com/marusama/semaphore v0.0.0-20190110074507-6952cef993b2
+## explicit
+# github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e
+## explicit
+# github.com/opentracing/opentracing-go v1.2.0
+## explicit
+# github.com/peterbourgon/g2s v0.0.0-20170223122336-d4e7ad98afea
+## explicit
+# github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5
+## explicit
+github.com/petermattis/goid
+# github.com/pierrre/geohash v1.0.0
+## explicit
+github.com/pierrre/geohash
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/sasha-s/go-deadlock v0.2.0
+## explicit
+github.com/sasha-s/go-deadlock
+# github.com/shopspring/decimal v1.2.0
+## explicit
+# github.com/spf13/pflag v1.0.5
+## explicit
+github.com/spf13/pflag
+# github.com/stretchr/testify v1.7.0
+## explicit
+github.com/stretchr/testify/assert
+github.com/stretchr/testify/require
+# github.com/twpayne/go-geom v1.3.6
+## explicit
+github.com/twpayne/go-geom
+github.com/twpayne/go-geom/bigxy
+github.com/twpayne/go-geom/encoding/ewkb
+github.com/twpayne/go-geom/encoding/ewkbhex
+github.com/twpayne/go-geom/encoding/geojson
+github.com/twpayne/go-geom/encoding/kml
+github.com/twpayne/go-geom/encoding/wkb
+github.com/twpayne/go-geom/encoding/wkbcommon
+github.com/twpayne/go-geom/encoding/wkbhex
+github.com/twpayne/go-geom/encoding/wkt
+github.com/twpayne/go-geom/sorting
+github.com/twpayne/go-geom/transform
+github.com/twpayne/go-geom/xy
+github.com/twpayne/go-geom/xy/internal
+github.com/twpayne/go-geom/xy/internal/centralendpoint
+github.com/twpayne/go-geom/xy/internal/hcoords
+github.com/twpayne/go-geom/xy/internal/raycrossing
+github.com/twpayne/go-geom/xy/internal/robustdeterminate
+github.com/twpayne/go-geom/xy/lineintersection
+github.com/twpayne/go-geom/xy/lineintersector
+github.com/twpayne/go-geom/xy/location
+github.com/twpayne/go-geom/xy/orientation
+# github.com/twpayne/go-kml v1.5.1
+github.com/twpayne/go-kml
+# golang.org/x/sys v0.0.0-20200930185726-fdedc70b468f
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/windows
+# golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
+## explicit
+# google.golang.org/grpc/examples v0.0.0-20210208035533-9280052d3665
+## explicit
+# gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f
+## explicit
+# gopkg.in/linkedin/goavro.v1 v1.0.5
+## explicit
+# gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+gopkg.in/yaml.v3
+# vitess.io/vitess v0.9.0
+## explicit

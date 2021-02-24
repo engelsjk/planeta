@@ -20,6 +20,7 @@ require (
 	github.com/cockroachdb/errors v1.8.2
 	github.com/cockroachdb/pebble v0.0.0-20210205133808-a516e691fb72 // indirect
 	github.com/cockroachdb/ttycolor v0.0.0-20180709150743-a1d5aaeb377d // indirect
+	github.com/dustin/go-humanize v1.0.0
 	github.com/elastic/gosigar v0.13.0 // indirect
 	github.com/elazarl/go-bindata-assetfs v1.0.1 // indirect
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
@@ -52,8 +53,9 @@ require (
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5 // indirect
 	github.com/pierrre/geohash v1.0.0
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/sasha-s/go-deadlock v0.2.0 // indirect
+	github.com/sasha-s/go-deadlock v0.2.0
 	github.com/shopspring/decimal v1.2.0 // indirect
+	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.7.0
 	github.com/twpayne/go-geom v1.3.6
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
