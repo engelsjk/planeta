@@ -572,8 +572,8 @@ func TestParseGeography(t *testing.T) {
 			"invalid",
 			Geography{},
 			`syntax error: invalid keyword at line 1, pos 0
-			LINE 1: invalid
-					^`,
+LINE 1: invalid
+        ^`,
 		},
 		{
 			"",
