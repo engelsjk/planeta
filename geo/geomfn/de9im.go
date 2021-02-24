@@ -11,10 +11,11 @@
 package geomfn
 
 import (
-	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo"
 	"github.com/engelsjk/planeta/geo/geos"
 	"github.com/engelsjk/planeta/util"
+
+	"github.com/cockroachdb/errors"
 )
 
 // Relate returns the DE-9IM relation between A and B.

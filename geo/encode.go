@@ -16,9 +16,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo/geopb"
 	"github.com/engelsjk/planeta/geo/geoprojbase"
+
+	"github.com/cockroachdb/errors"
 	"github.com/golang/geo/s1"
 	"github.com/pierrre/geohash"
 	"github.com/twpayne/go-geom"

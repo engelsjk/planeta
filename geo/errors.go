@@ -13,8 +13,9 @@ package geo
 import (
 	"fmt"
 
-	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo/geopb"
+
+	"github.com/cockroachdb/errors"
 )
 
 // NewMismatchingSRIDsError returns the error message for SRIDs of GeospatialTypes

@@ -11,10 +11,10 @@
 package geomfn
 
 import (
+	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo"
 	"github.com/engelsjk/planeta/geo/geopb"
 	"github.com/engelsjk/planeta/geo/geos"
-	"github.com/cockroachdb/errors"
 	"github.com/twpayne/go-geom"
 	"github.com/twpayne/go-geom/xy"
 )
@@ -24,6 +24,11 @@ import (
 func Node(g geo.Geometry) (geo.Geometry, error) {
 	if g.ShapeType() != geopb.ShapeType_LineString && g.ShapeType() != geopb.ShapeType_MultiLineString {
 		return geo.Geometry{}, errors.New("geometry type is unsupported. Please pass a LineString or a MultiLineString")
+	}
+
+	// Return GEOMETRYCOLLECTION EMPTY if it is empty.
+	if g.Empty() {
+		return geo.MakeGeometryFromGeomT(geom.NewGeometryCollection().SetSRID(int(g.SRID())))
 	}
 
 	res, err := geos.Node(g.EWKB())
@@ -56,7 +61,13 @@ func Node(g geo.Geometry) (geo.Geometry, error) {
 	if err != nil {
 		return geo.Geometry{}, errors.Newf("error extracting endpoints: %v", err)
 	}
-	mllines := glines.(*geom.MultiLineString)
+	var mllines *geom.MultiLineString
+	switch t := glines.(type) {
+	case *geom.MultiLineString:
+		mllines = t
+	default:
+		return geo.Geometry{}, errors.AssertionFailedf("unknown LineMerge result type: %T", t)
+	}
 
 	gep, err := ep.AsGeomT()
 	if err != nil {
