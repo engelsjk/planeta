@@ -21,7 +21,6 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/engelsjk/planeta/docs"
 	"github.com/engelsjk/planeta/geo/geopb"
 
 	"github.com/cockroachdb/errors"
@@ -201,17 +200,17 @@ func initGEOS(dirs []string) (*C.CR_GEOS, string, error) {
 }
 
 func wrapGEOSInitError(err error) error {
-	page := "linux"
-	switch runtime.GOOS {
-	case "darwin":
-		page = "mac"
-	case "windows":
-		page = "windows"
-	}
+	// page := "linux"
+	// switch runtime.GOOS {
+	// case "darwin":
+	// 	page = "mac"
+	// case "windows":
+	// 	page = "windows"
+	// }
 	return errors.WithHintf(
 		err,
-		"Ensure you have the spatial libraries installed as per the instructions in %s",
-		docs.URL("install-cockroachdb-"+page),
+		"Ensure you have the spatial libraries installed as per the instructions at %s",
+		"https://github.com/engelsjk/planeta#geos",
 	)
 }
 

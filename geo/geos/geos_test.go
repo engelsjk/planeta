@@ -22,13 +22,13 @@ func TestInitGEOS(t *testing.T) {
 	t.Run("test no initGEOS paths", func(t *testing.T) {
 		_, _, err := initGEOS([]string{})
 		require.Error(t, err)
-		require.Regexp(t, "Ensure you have the spatial libraries installed as per the instructions in .*install-cockroachdb-", strings.Join(errors.GetAllHints(err), "\n"))
+		require.Regexp(t, "Ensure you have the spatial libraries installed as per the instructions at https://github.com/engelsjk/planeta#geos", strings.Join(errors.GetAllHints(err), "\n"))
 	})
 
 	t.Run("test invalid initGEOS paths", func(t *testing.T) {
 		_, _, err := initGEOS([]string{"/invalid/path"})
 		require.Error(t, err)
-		require.Regexp(t, "Ensure you have the spatial libraries installed as per the instructions in .*install-cockroachdb-", strings.Join(errors.GetAllHints(err), "\n"))
+		require.Regexp(t, "Ensure you have the spatial libraries installed as per the instructions at https://github.com/engelsjk/planeta#geos", strings.Join(errors.GetAllHints(err), "\n"))
 	})
 
 	t.Run("test valid initGEOS paths", func(t *testing.T) {
