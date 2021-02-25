@@ -1,8 +1,8 @@
 # planeta
 
-Package ```planeta``` provides geospatial utilities for Go. It is intended to be a stand-alone copy of [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo), a library that powers the spatial data support in CockroachDB.
+Package ```planeta``` provides geospatial utilities for Go. It is intended to be an unaffiliated, stand-alone copy of [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo), a library that powers the spatial data support in CockroachDB.
 
-```planeta``` is a work in progress.
+A work in progress.
 
 ## Install
 
@@ -12,7 +12,7 @@ To install the library:
 
 ### GEOS
 
-Package ```planeta``` is dependent on the GEOS libraries for some spatial functions. Modified versions of these GEOS libraries have been custom-built by Cockroach and need to be installed.
+Package ```planeta``` is dependent on the GEOS libraries for some spatial functions. Modified versions of these GEOS libraries have been custom-built by Cockroach and need to be installed. 
 
 To install these libraries, follow the instructions ([mac](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-mac.html) / [linux](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-linux.html)) in *Download the Binary*, steps 1-3.
 
