@@ -1,6 +1,6 @@
 # planeta
 
-Package ```planeta``` provides geospatial utilities for Go. It is intended to be an unaffiliated, stand-alone copy of [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo), a library that powers the spatial data support in CockroachDB.
+Package ```planeta``` provides geospatial utilities for Go. It is an unaffiliated, stand-alone copy of [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo), a library that powers spatial data support in CockroachDB.
 
 A work in progress.
 
