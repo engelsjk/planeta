@@ -4,6 +4,7 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"fmt"
+	"log"
 
 	"github.com/engelsjk/planeta/geo/geopb"
 	"github.com/engelsjk/planeta/geo/geos"
@@ -81,12 +82,12 @@ func main() {
 
 	g1, err := featureToEWKB(s1)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	g2, err := featureToEWKB(s2)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	// valid
@@ -94,13 +95,13 @@ func main() {
 	if isValid, err := geos.IsValid(g1); err == nil {
 		fmt.Printf("g1 valid: %t\n", isValid)
 	} else {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	if isValid, err := geos.IsValid(g2); err == nil {
 		fmt.Printf("g2 valid: %t\n", isValid)
 	} else {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	// intersects
@@ -108,7 +109,7 @@ func main() {
 	if intersects, err := geos.Intersects(g1, g2); err == nil {
 		fmt.Printf("g1 intersects g2: %t\n", intersects)
 	} else {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	// intersection
@@ -117,11 +118,11 @@ func main() {
 
 	g, err := ewkb.Unmarshal(intersection)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	b, err := geojson.Marshal(g)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	fmt.Printf("intersection: %s\n", string(b))
 

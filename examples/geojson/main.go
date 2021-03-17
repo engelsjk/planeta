@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 
 	"github.com/engelsjk/planeta/geo"
 	"github.com/engelsjk/planeta/geo/geojsonext"
@@ -49,7 +50,7 @@ func main() {
 	f := &geojson.Feature{}
 	err := json.Unmarshal([]byte(s), f)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	fmt.Printf("%+v\n", f.Properties)
@@ -57,17 +58,17 @@ func main() {
 	if name, err := geojsonext.PropertyString(f.Properties, "name"); err == nil {
 		fmt.Printf("name: %s\n", name)
 	} else {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	g, err := geo.MakeGeometryFromGeomT(f.Geometry)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	if isValid, err := geos.IsValid(g.EWKB()); err == nil {
 		fmt.Printf("isvalid: %t\n", isValid)
 	} else {
-		panic(err)
+		log.Fatal(err)
 	}
 }
