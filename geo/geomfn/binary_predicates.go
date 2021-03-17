@@ -11,9 +11,10 @@
 package geomfn
 
 import (
-	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo"
 	"github.com/engelsjk/planeta/geo/geos"
+
+	"github.com/cockroachdb/errors"
 	"github.com/twpayne/go-geom"
 )
 

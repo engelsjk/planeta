@@ -11,11 +11,9 @@
 package geomfn
 
 import (
+	"github.com/cockroachdb/errors"
 	"github.com/engelsjk/planeta/geo"
 	"github.com/engelsjk/planeta/geo/geos"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgcode"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/errors"
 	"github.com/twpayne/go-geom"
 	"github.com/twpayne/go-geom/encoding/ewkb"
 )
@@ -76,8 +74,7 @@ func LineLocatePoint(line geo.Geometry, point geo.Geometry) (float64, error) {
 	}
 	lineString, ok := lineT.(*geom.LineString)
 	if !ok {
-		return 0, pgerror.Newf(pgcode.InvalidParameterValue,
-			"first parameter has to be of type LineString")
+		return 0, errors.Newf("first parameter has to be of type LineString")
 	}
 
 	// compute closest point on line to the given point
@@ -257,12 +254,10 @@ func removePoint(lineString *geom.LineString, index int) (*geom.LineString, erro
 // LineSubstring returns a LineString being a substring by start and end
 func LineSubstring(g geo.Geometry, start, end float64) (geo.Geometry, error) {
 	if start < 0 || start > 1 || end < 0 || end > 1 {
-		return g, pgerror.Newf(pgcode.InvalidParameterValue,
-			"start and and must be within 0 and 1")
+		return g, errors.Newf("start and and must be within 0 and 1")
 	}
 	if start > end {
-		return g, pgerror.Newf(pgcode.InvalidParameterValue,
-			"end must be greater or equal to the start")
+		return g, errors.Newf("end must be greater or equal to the start")
 	}
 
 	if start == end {
@@ -275,8 +270,7 @@ func LineSubstring(g geo.Geometry, start, end float64) (geo.Geometry, error) {
 	}
 	lineString, ok := lineT.(*geom.LineString)
 	if !ok {
-		return g, pgerror.Newf(pgcode.InvalidParameterValue,
-			"first parameter has to be of type LineString")
+		return g, errors.Newf("first parameter has to be of type LineString")
 	}
 
 	// Flat line should be return point empty immediately,

@@ -13,6 +13,7 @@ package geomfn
 import (
 	"github.com/engelsjk/planeta/geo"
 	"github.com/engelsjk/planeta/geo/geos"
+
 	"github.com/cockroachdb/errors"
 	"github.com/twpayne/go-geom"
 	"github.com/twpayne/go-geom/encoding/ewkb"
