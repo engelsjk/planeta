@@ -24,7 +24,6 @@ In development.
 
 The following sub-packages from [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo) have not been implemented in ```planeta``` yet.
 
-* geoindex
 * geoproj
 * geotransform
 
