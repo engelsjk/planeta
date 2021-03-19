@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
+	geojsonext "github.com/engelsjk/planeta-ext/geojson"
 	"github.com/engelsjk/planeta/geo"
-	"github.com/engelsjk/planeta/geo/geojsonext"
 	"github.com/engelsjk/planeta/geo/geos"
 	"github.com/twpayne/go-geom/encoding/geojson"
 )
