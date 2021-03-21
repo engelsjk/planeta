@@ -8,6 +8,7 @@
 // by the Apache License, Version 2.0, included in the file
 // licenses/APL.txt.
 
+// Package geosegmentize contains a function to segmentize a geometry.
 package geosegmentize
 
 import (

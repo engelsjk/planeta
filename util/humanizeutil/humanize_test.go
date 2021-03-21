@@ -15,11 +15,12 @@ import (
 	"testing"
 
 	"github.com/engelsjk/planeta/util/humanizeutil"
+	"github.com/engelsjk/planeta/util/leaktest"
 )
 
 // TestHumanizeBytes verifies both IBytes and ParseBytes.
 func TestBytes(t *testing.T) {
-	// defer leaktest.AfterTest(t)()
+	defer leaktest.AfterTest(t)()
 
 	testCases := []struct {
 		value       int64

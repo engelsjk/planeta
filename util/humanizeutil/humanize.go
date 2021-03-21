@@ -8,6 +8,7 @@
 // by the Apache License, Version 2.0, included in the file
 // licenses/APL.txt.
 
+// Package humanizeutil provides tools for formatting units to human friendly sizes.
 package humanizeutil
 
 import (

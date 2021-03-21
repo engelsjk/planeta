@@ -8,6 +8,7 @@
 // by the Apache License, Version 2.0, included in the file
 // licenses/APL.txt.
 
+// Package geopb contains the serialization functions of a base spatial object type.
 package geopb
 
 import (

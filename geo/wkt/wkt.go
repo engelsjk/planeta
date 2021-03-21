@@ -10,6 +10,7 @@
 
 //go:generate sh generate.sh
 
+// Package wkt contains a function to unmarshal a string of Well-Known Text (WKT).
 package wkt
 
 import "github.com/twpayne/go-geom"
