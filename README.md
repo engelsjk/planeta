@@ -2,7 +2,7 @@
 
 Package ```planeta``` provides geospatial utilities for Go.
 
-It is a lightly modified, stand-alone copy of [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo), the library that powers spatial data support in CockroachDB.
+It is a lightly modified, stand-alone copy of Cockroach Lab's [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo), a library that powers spatial data support in their distributed SQL database, CockroachDB.
 
 ## Key Features
 
@@ -15,7 +15,13 @@ It is a lightly modified, stand-alone copy of [cockroach/pkg/geo](https://github
 
 Geometry types in ```planeta``` are based on the types provided in the [```twpayne/go-geom``` package](https://github.com/twpayne/go-geom/), which support "OpenGeo Consortium-style geometries, 2D and 3D geometries, measures (time and/or distance), and unlimited extra dimensions".
 
-Geometries and geographies in ```planeta``` can be easily converted into ```geom.T``` objects, the generic interface implemented by all geometry types in ```go-geom```, which should provide compatibility with all features in ```twpyane/go-geom```.
+* Point, MultiPoint
+* LineString, MultiLineString
+* Polygon, MultiPolygon
+* Geometry, GeometryCollection
+* 2D, Z, M and ZM
+
+Geometries and geographies in ```planeta``` can be easily converted into ```go-geom```'s generic spatial interface objects (```geom.T```) to provide compatibility with all features in ```twpyane/go-geom```.
 
 ## Install
 
@@ -33,19 +39,9 @@ To install this library, follow the instructions ([mac](https://www.cockroachlab
 
 Projection transformations require the PROJ library to already be installed. Instructions can be found [here](https://proj.org/install.html).
 
-## Usage & Examples
+## Usage Examples
 
-link to go.pkgdocs f or the following...
-
-geo.go
-geomfn
-geogfn
-
-### Parsing
-### Binary Predicates
-### Transform
-### Segmentize
-### Decoding
+For usage examples, see [```engelsjk/planeta-examples```](https://github.com/engelsjk/planeta-examples/).
 
 ## License
 
