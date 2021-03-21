@@ -33,7 +33,7 @@ To install the library:
 
 Some functionality in ```planeta``` is dependent on custom-built versions of the GEOS library.
 
-To install this library, follow the instructions ([mac](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-mac.html) / [linux](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-linux.html)) in *Download the Binary*, steps 1-3.
+To install this library, follow the instructions ([mac](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-mac.html) / [linux](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-linux.html)) in CockroachDB's *Download the Binary*, steps 1-3.
 
 ### PROJ
 
