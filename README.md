@@ -31,13 +31,13 @@ To install the library:
 
 ### GEOS
 
-Some functionality in ```planeta``` is dependent on custom-built versions of the GEOS library.
+Some functionality in ```planeta``` is dependent on CockroachDB-built custom versions of the GEOS library.
 
 To install this library, follow the instructions ([mac](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-mac.html) / [linux](https://www.cockroachlabs.com/docs/stable/install-cockroachdb-linux.html)) in CockroachDB's *Download the Binary*, steps 1-3.
 
 ### PROJ
 
-Projection transformations require the PROJ library to already be installed. Instructions can be found [here](https://proj.org/install.html).
+Projection transformations require installation of the PROJ library. Instructions can be found [here](https://proj.org/install.html).
 
 ## Usage Examples
 
