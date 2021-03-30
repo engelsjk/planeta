@@ -2,7 +2,7 @@
 
 Package ```planeta``` provides geospatial utilities for Go.
 
-It is a lightly modified, stand-alone fork of CockroachDB's [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo) subpackage.
+It is a lightly modified, stand-alone fork of CockroachDB's [cockroach/pkg/geo](https://github.com/cockroachdb/cockroach/tree/master/pkg/geo) subpackage which provides PostgreSQL/PostGIS spatial data compatability. 
 
 ## Key Features
 
